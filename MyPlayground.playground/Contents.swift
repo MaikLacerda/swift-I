@@ -1,15 +1,14 @@
 import UIKit
-///contador de calorias com arrays
-let totalcalories = [50.5 , 100, 300, 500, 450]
-print(totalcalories)
 
-for i in 0...3 {
-    print("Calories are \(totalcalories[i])")
-}
-for i in 0...totalcalories.count-1 {
-    print(totalcalories[i])
+///let calories = [50.5, 100]
+// passagem de arrays com retorno
+
+func allCalories(calories:Array<Double>) -> Double {
+    var total:Double = 0
+    for c in calories {
+        total += c
+    }
+    return total
 }
 
-for calories in totalcalories {
-    print(calories)
-}
+allCalories(calories: [10.5, 100, 300, 500, 300, 300])
